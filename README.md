@@ -1,9 +1,11 @@
+## Usage
 Its pretty simple to use:
 
 	./audio_test <file>
 
-Requires SFML 2.1 <http://www.sfml-dev.org>.
+Requires [SFML 2.1](http://www.sfml-dev.org).
 
+## Compiling
 To compile, just type:
 
 	g++ -o audio_test audio_test.cpp -lsfml-system -lsfml-audio
