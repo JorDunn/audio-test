@@ -9,10 +9,29 @@
 
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
 
 using namespace std;
 
+void versionCheck() {
+	sf::Http http;
+	http.setHost("http://nodetwo.com/");
+
+	sf::Http::Request request;
+	request.setMethod(sf::Http::Request::Get);
+	request.setUri("version/audio_test.json");
+	
+	sf::Http::Response response = http.sendRequest(request);
+
+	if(response.getStatus() != 200) {
+		cout << "Could not reach update server..." << endl;
+	}
+}
+
 int main(int argc, char *argv[]) {
+
+	versionCheck();
+
 	if (argc != 2) {
 		cout << "Audio Test 1.0.1" << endl;
 		cout << "Usage is: audio_test <file>" << endl;
