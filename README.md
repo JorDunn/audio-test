@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/JorDunn/Audio-Test.png?branch=master)](https://travis-ci.org/JorDunn/Audio-Test)
+
 ## Usage
 Its pretty simple to use:
 
@@ -14,8 +16,7 @@ or if using OSX:
 
 	g++ -o audio_test audio_test.cpp -framework SFML -lsfml-audio -lsfml-network -lsfml-system
 
-This little program should compile just fine on OSX and Linux.
-Also included is a OSX 64bit binary with a linux version on its way. Enjoy!
+This little program should compile just fine on OSX and Linux. Enjoy!
 
 ## Notes
 * [SFML supported audio formats](https://github.com/LaurentGomila/SFML/wiki/FAQ#wiki-audio-formats)
