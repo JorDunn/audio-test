@@ -1,0 +1,10 @@
+language: cpp
+compiler:
+  - gcc
+  - clang
+notificaions:
+  recipients:
+    - jordan@nodetwo.net
+  email:
+    on_success: change
+    on_failure: always
