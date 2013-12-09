@@ -3,7 +3,7 @@ compiler:
   - gcc
   - clang
 install:
-  - sudo apt-get install libsfml-dev
+  - sudo apt-get install libsfml-dev=2.0
 notificaions:
   recipients:
     - jordan@nodetwo.net
