@@ -1,0 +1,5 @@
+all:
+	g++ -o audio_test audio_test.cpp -lsfml-system -lsfml-audio -lsfml-network
+
+clean:
+	rm -f audio_test *.o
