@@ -9,6 +9,7 @@ Requires [SFML 2.1](http://www.sfml-dev.org).
 
 ## Building
 To build:
+
 	./configure
 	make
 	???
