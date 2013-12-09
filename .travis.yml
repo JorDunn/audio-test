@@ -2,6 +2,8 @@ language: cpp
 compiler:
   - gcc
   - clang
+install:
+  - sudo apt-get install libsfml-dev=2.1
 notificaions:
   recipients:
     - jordan@nodetwo.net
