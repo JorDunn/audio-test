@@ -7,14 +7,12 @@ Its pretty simple to use:
 
 Requires [SFML 2.1](http://www.sfml-dev.org).
 
-## Compiling
-To compile, just type:
-
-	g++ -o audio_test audio_test.cpp -lsfml-system -lsfml-audio -lsfml-network
-
-or if using OSX:
-
-	g++ -o audio_test audio_test.cpp -framework SFML -lsfml-audio -lsfml-network -lsfml-system
+## Building
+To build:
+	./configure
+	make
+	???
+	profit!
 
 This little program should compile just fine on OSX and Linux. Enjoy!
 
