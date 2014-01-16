@@ -3,7 +3,15 @@
 ## Usage
 Its pretty simple to use:
 
-	./audio_test <file>
+	./audio_test -f <file>
+
+or, to check for updates
+
+	./audio_test -u
+
+or, to see the help
+
+	./audio_test -h
 
 Requires [SFML 2.1](http://www.sfml-dev.org).
 

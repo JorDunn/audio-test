@@ -1,6 +1,6 @@
 /*
 	Audio Test
-	Jordan Dunn (c) 2012-2013
+	Jordan Dunn (c) 2012-2014
 	dunnj@my.normandale.edu
 */
 
@@ -13,7 +13,7 @@
 
 using namespace std;
 
-void versionCheck() {
+void updateCheck() {
 	sf::Http http;
 	http.setHost("http://nodetwo.com/");
 
@@ -30,24 +30,25 @@ void versionCheck() {
 
 int main(int argc, char *argv[]) {
 
-	versionCheck();
-
-	if (argc != 2) {
+	if ((argc == 1) || (strcmp(argv[1], "-h") == 0)) {
 		cout << "Audio Test 1.0.1" << endl;
 		cout << "Usage is: audio_test <file>" << endl;
 	}
-	else {
-		string song = argv[1];
+	else if (strcmp(argv[1], "-f") == 0) {
+		string song_file = argv[2];
 
 		sf::Music music;
-		if (!music.openFromFile(song)) {
+		if (!music.openFromFile(song_file)) {
 			return -1;
 		}
 		music.play();
 
-		cout << "Now playing " << song << endl;
+		cout << "Now playing " << song_file << endl;
 		cout << "Hit [ENTER] to exit program" << endl;
-		cin.ignore().get();
+		cin.ignore();
+	}
+	else if (strcmp(argv[1], "-u") == 0) {
+		updateCheck();
 	}
 	return 0;
 }
