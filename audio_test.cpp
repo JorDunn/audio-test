@@ -1,17 +1,52 @@
 /*
 	Audio Test
 	Jordan Dunn (c) 2012-2014
-	dunnj@my.normandale.edu
+	jordan@nodetwo.net
 */
 
 #include <iostream>
-#include <string>
+#include <string.h>
 
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 #include <SFML/Network.hpp>
 
 using namespace std;
+
+void argParser(int argc, char *argv);
+void playFile(string music_file);
+void updateCheck();
+
+void argParser(int argc, char *argv[]) {
+	if(strcmp(argv[1], "-h") == 0) {
+		cout << "Audio Test 0.0.1alpha" << endl;
+		cout << "Usage is: audio_test <file>" << endl;
+		return;
+	}
+	else if(strcmp(argv[1], "-u") == 0) {
+		updateCheck();
+	}
+	else if(strcmp(argv[1], "-f") == 0) {
+		playFile(argv[2]);
+	}
+	else {
+		cout << "Audio Test 0.0.1alpha" << endl;
+		cout << "Usage is: audio_test <file>" << endl;
+		return;
+	}
+}
+
+void playFile(string music_file) {
+	sf::Music music;
+	if (!music.openFromFile(music_file)) {
+		return;
+	}
+	music.play();
+
+	cout << "Now playing " << music_file << endl;
+	cout << "Hit [ENTER] to exit program" << endl;
+	cin.ignore();
+}
 
 void updateCheck() {
 	sf::Http http;
@@ -30,25 +65,7 @@ void updateCheck() {
 
 int main(int argc, char *argv[]) {
 
-	if ((argc == 1) || (strcmp(argv[1], "-h") == 0)) {
-		cout << "Audio Test 1.0.1" << endl;
-		cout << "Usage is: audio_test <file>" << endl;
-	}
-	else if (strcmp(argv[1], "-f") == 0) {
-		string song_file = argv[2];
+	argParser(argc, argv);
 
-		sf::Music music;
-		if (!music.openFromFile(song_file)) {
-			return -1;
-		}
-		music.play();
-
-		cout << "Now playing " << song_file << endl;
-		cout << "Hit [ENTER] to exit program" << endl;
-		cin.ignore();
-	}
-	else if (strcmp(argv[1], "-u") == 0) {
-		updateCheck();
-	}
 	return 0;
 }
