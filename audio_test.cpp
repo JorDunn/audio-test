@@ -1,7 +1,7 @@
 /*
-	Audio Test
-	Jordan Dunn (c) 2012-2014
-	jordan@nodetwo.net
+	program: audio_test
+	author: Jordan Dunn <jordan@nodetwo.net>
+	copyright (c) 2012-2014
 */
 
 #include <iostream>
@@ -9,29 +9,31 @@
 
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
-#include <SFML/Network.hpp>
+
+#define VERSION "0.0.1alpha"
 
 using namespace std;
 
-void argParser(int argc, char *argv);
+void argParser(int argc, char **argv);
 void playFile(string music_file);
-void updateCheck();
+void help();
+
+int main(int argc, char *argv[]) {
+	argParser(argc, argv);
+
+	return 0;
+}
 
 void argParser(int argc, char *argv[]) {
-	if(strcmp(argv[1], "-h") == 0) {
-		cout << "Audio Test 0.0.1alpha" << endl;
-		cout << "Usage is: audio_test <file>" << endl;
+	if(!strcmp(argv[1], "-h")) {
+		help();
 		return;
 	}
-	else if(strcmp(argv[1], "-u") == 0) {
-		updateCheck();
-	}
-	else if(strcmp(argv[1], "-f") == 0) {
+	else if(!strcmp(argv[1], "-f")) {
 		playFile(argv[2]);
 	}
 	else {
-		cout << "Audio Test 0.0.1alpha" << endl;
-		cout << "Usage is: audio_test <file>" << endl;
+		help();
 		return;
 	}
 }
@@ -48,24 +50,7 @@ void playFile(string music_file) {
 	cin.ignore();
 }
 
-void updateCheck() {
-	sf::Http http;
-	http.setHost("http://nodetwo.com/");
-
-	sf::Http::Request request;
-	request.setMethod(sf::Http::Request::Get);
-	request.setUri("version/audio_test.json");
-	
-	sf::Http::Response response = http.sendRequest(request);
-
-	if(response.getStatus() != 200) {
-		cout << "Could not reach update server..." << endl;
-	}
-}
-
-int main(int argc, char *argv[]) {
-
-	argParser(argc, argv);
-
-	return 0;
+void help() {
+	cout << "Audio Test " << VERSION << endl;
+	cout << "Usage is: audio_test -f <file>" << endl;
 }

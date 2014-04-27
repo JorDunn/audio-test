@@ -5,17 +5,13 @@ Its pretty simple to use:
 
 	./audio_test -f <file>
 
-or, to check for updates
-
-	./audio_test -u
-
 or, to see the help
 
 	./audio_test -h
 
 Requires [SFML 2.1](http://www.sfml-dev.org).
 
-## Building
+## Building the C++ version
 To build:
 
 	./configure
@@ -23,9 +19,8 @@ To build:
 	???
 	profit!
 
-This little program should compile just fine on OSX and Linux with SFML 2.1+. Enjoy!
+This little program should compile just fine on OSX and Linux with SFML 2.1+ (Windows is untested). Enjoy!
 
 ## Notes
-* This will not compile on _ANY_ system with a SFML below 2.1!
+* This will not compile on _ANY_ system with a SFML/CSFML below 2.1!
 * [SFML supported audio formats](https://github.com/LaurentGomila/SFML/wiki/FAQ#wiki-audio-formats)
-* Don't panic if you see it say "Could not reach update server..."! The version checking code does not currently work completely. I'll be finishing it up over the course of winter break.
