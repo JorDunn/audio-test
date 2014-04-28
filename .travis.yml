@@ -5,8 +5,7 @@ compiler:
 before_script:
   - sudo add-apt-repository ppa:sonkun/sfml-stable
   - sudo apt-get update -q
-install:
-  - sudo apt-get install libsfml-dev=2.0
+  - sudo apt-get install libsfml-dev
 notifications:
   recipients:
     - jordan@nodetwo.net
