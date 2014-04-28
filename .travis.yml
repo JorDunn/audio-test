@@ -3,7 +3,7 @@ compiler:
   - g++
   - clang++
 before_script:
-  - sudo add-apt-repository ppa:sonkun/sfml-stable
+  - sudo add-apt-repository -y ppa:sonkun/sfml-stable
   - sudo apt-get update -q
   - sudo apt-get install libsfml-dev
 notifications:
