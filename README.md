@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/JorDunn/Audio-Test.png?branch=master)](https://travis-ci.org/JorDunn/Audio-Test)
+[![Build Status](https://travis-ci.org/JorDunn/audio-test.svg?branch=master)](https://travis-ci.org/JorDunn/audio-test)
 
 ## Usage
 Its pretty simple to use:
