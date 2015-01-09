@@ -15,7 +15,15 @@ Requires [SFML 2.1](http://www.sfml-dev.org).
 To build:
 
 	./configure
-	make
+	make cpp
+	???
+	profit!
+
+## Building the C version
+To build:
+
+	./configure
+	make c
 	???
 	profit!
 

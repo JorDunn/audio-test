@@ -2,6 +2,7 @@ language: cpp
 compiler:
   - g++
   - clang++
+  - gcc
 before_script:
   - sudo add-apt-repository -y ppa:sonkun/sfml-stable
   - sudo apt-get update -q
@@ -12,4 +13,4 @@ notifications:
   email:
     on_success: change
     on_failure: always
-script: ./configure && make
+script: ./configure && make cpp

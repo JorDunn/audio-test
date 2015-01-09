@@ -1,7 +1,7 @@
 /*
     program: audio_test
     author: Jordan Dunn <jordan@nodetwo.net>
-    copyright (c) 2012-2014
+    copyright (c) 2012-2015
 */
 
 #include <iostream>
@@ -10,7 +10,7 @@
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 
-#define VERSION "0.0.1alpha"
+#define VERSION "0.0.2alpha"
 
 using namespace std;
 
