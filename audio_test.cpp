@@ -10,12 +10,10 @@
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 
-#define VERSION "0.0.2alpha"
-
-using namespace std;
+#define VERSION "0.0.3alpha"
 
 void argParser(int argc, char **argv);
-void playFile(string music_file);
+void playFile(std::string music_file);
 void help();
 
 int main(int argc, char *argv[]) {
@@ -38,19 +36,19 @@ void argParser(int argc, char *argv[]) {
     }
 }
 
-void playFile(string music_file) {
+void playFile(std::string music_file) {
     sf::Music music;
     if (!music.openFromFile(music_file)) {
         return;
     }
     music.play();
 
-    cout << "Now playing " << music_file << endl;
-    cout << "Hit [ENTER] to exit program" << endl;
-    cin.ignore();
+    std::cout << "Now playing " << music_file << std::endl;
+    std::cout << "Hit [ENTER] to exit program" << std::endl;
+    std::cin.ignore();
 }
 
 void help() {
-    cout << "Audio Test " << VERSION << endl;
-    cout << "Usage is: audio_test -f <file>" << endl;
+    std::cout << "Audio Test " << VERSION << std::endl;
+    std::cout << "Usage is: audio_test -f <file>" << std::endl;
 }
