@@ -5,7 +5,4 @@ clean:
 	rm -f audio_test *.o
 
 cpp:
-	g++ -o audio_test audio_test.cpp -lsfml-system -lsfml-audio
-
-c:
-	gcc -o audio_test audio_test.c -lcsfml-system -lcsfml-audio
+	g++ -o audio_test main.cpp audio_player.cpp -lsfml-system -lsfml-audio
