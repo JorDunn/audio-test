@@ -1,8 +1,13 @@
+UNAME_S := $(shell uname -s)
+ifeq ($(UNAME_S),Darwin)
+	LD_FLAGS += -framework sfml-system -framework sfml-audio
+endif
+ifeq ($(UNAME_S),Linux)
+	LD_FLAGS += -lsfml-system -lsfml-audio
+endif
+
 all:
-	cpp
+	g++ -o audio_test audio_player.cpp main.cpp $(LD_FLAGS)
 
 clean:
-	rm -f audio_test *.o
-
-cpp:
-	g++ -o audio_test main.cpp audio_player.cpp -lsfml-system -lsfml-audio
+	rm -f audio_test *.o Makefile

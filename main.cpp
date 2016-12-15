@@ -1,14 +1,11 @@
 /*
     program: audio_test
     author: Jordan Dunn <jordan@nodetwo.net>
-    copyright (c) 2012-2015
+    copyright (c) 2012-2017
 */
 
 #include <iostream>
 #include <string.h>
-
-#include <SFML/System.hpp>
-#include <SFML/Audio.hpp>
 
 #include "audio_player.h"
 

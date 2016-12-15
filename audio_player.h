@@ -10,6 +10,6 @@ class AudioPlayer {
         void play();
 
         void displaySongInfo(std::string song);
-}
+};
 
 #endif

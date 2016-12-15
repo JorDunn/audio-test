@@ -3,6 +3,12 @@
 #include <string>
 #include <exception>
 
+#include <SFML/System.hpp>
+#include <SFML/Audio.hpp>
+
+#include "audio_player.h"
+
+
 AudioPlayer::AudioPlayer(std::string file) {
     this->file = file;
 }

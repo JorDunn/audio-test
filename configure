@@ -581,7 +581,7 @@ PACKAGE_STRING='Audio Test 1.0.2'
 PACKAGE_BUGREPORT=''
 PACKAGE_URL=''
 
-ac_unique_file="audio_test.cpp"
+ac_unique_file="main.cpp"
 ac_subst_vars='LTLIBOBJS
 LIBOBJS
 OBJEXT
