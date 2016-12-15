@@ -2,15 +2,14 @@ language: cpp
 compiler:
   - g++
   - clang++
-  - gcc
 before_script:
   - sudo add-apt-repository -y ppa:sonkun/sfml-stable
   - sudo apt-get update -q
-  - sudo apt-get install libsfml-dev libcsfml-dev
+  - sudo apt-get install libsfml-dev
 notifications:
   recipients:
     - jordan@nodetwo.net
   email:
     on_success: change
     on_failure: always
-script: ./configure && make cpp && make c
+script: ./configure && make
